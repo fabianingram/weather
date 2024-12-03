@@ -1,0 +1,197 @@
+/* General styles for mobile-first design */
+body {
+    background: #8C52FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Input and Button */
+#search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#city {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #debff4;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    width: auto;
+}
+
+button:hover {
+    background: #8b48d7;
+}
+
+/* Current weather section */
+#current-weather img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    display: block;
+}
+
+#temp-div {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: -10px;
+}
+
+#weather-info {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Hourly forecast */
+#hourly-forecast h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#forecast-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    padding: 10px 0;
+}
+
+.forecast-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.forecast-box img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #weather-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #city {
+        width: 60%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #current-weather img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #temp-div {
+        font-size: 2rem;
+    }
+
+    #forecast-container {
+        gap: 8px;
+    }
+
+    .forecast-box {
+        min-width: 70px;
+        padding: 8px;
+    }
+
+    .forecast-box img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #weather-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #search-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #city {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #current-weather img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #temp-div {
+        font-size: 1.5rem;
+    }
+
+    #forecast-container {
+        gap: 5px;
+    }
+
+    .forecast-box {
+        min-width: 60px;
+        padding: 5px;
+    }
+
+    .forecast-box img {
+        width: 25px;
+        height: 25px;
+    }
+}
